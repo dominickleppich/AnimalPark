@@ -14,7 +14,7 @@ import java.awt.geom.Ellipse2D;
 public class PuzzlePanel extends JPanel implements MouseListener {
     private static final int FIELD_SIZE = 50;
     private static final int STROKE = 2;
-    private static final Color[] COLORS = new Color[]{Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW, Color.GRAY, Color.PINK, Color.ORANGE};
+    private static final Color[] COLORS = new Color[]{new Color(20, 11, 191), new Color(161, 161, 161), new Color(20, 94, 24), new Color(136, 156, 56), new Color(150, 16, 116)};
 
     private Puzzle puzzle;
 
