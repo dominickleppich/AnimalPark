@@ -11,7 +11,6 @@ public class MyPuzzle extends Puzzle{
     private int parks;
 
     public MyPuzzle(int[] board, int p){
-        System.out.println(p);
         parks = p;
         size = (int) sqrt(board.length);
         fields = new Field[size][size];
@@ -25,7 +24,6 @@ public class MyPuzzle extends Puzzle{
     @Override
     public void setMark(int x, int y, boolean mark){
         fields[x][y].setMark(mark);
-        System.out.println("Feld gesetzt");
         setChanged();
         notifyObservers(isWin());
     }
@@ -58,16 +56,12 @@ public class MyPuzzle extends Puzzle{
                 cols[i]++;
                 rows[j]++;
                 color[fields[i][j].getColor()]++;
-                System.out.println("Schleife 1 " + i + " " + j);
             }
         }
         for(int i = 0; i < size; i++){
-            System.out.println("Schleife 2.1 " + i);
             if(cols[i] != parks || rows[i] != parks || color[i] != parks)
                 return false;
-            System.out.println("Schleife 2.2 " + i);
         }
-        System.out.println("gewonnen :D");
         return true;
     }
 
