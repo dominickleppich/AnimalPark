@@ -25,6 +25,7 @@ public class MyPuzzle extends Observable implements Puzzle{
 
     @Override
     public boolean isMark(int x, int y){
+        return false;
     }
 
     @Override
