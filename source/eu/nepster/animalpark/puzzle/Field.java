@@ -18,4 +18,8 @@ public class Field {
     public boolean isMark(){
         return mark;
     }
+
+    public void setMark(boolean m){
+        mark = m;
+    }
 }

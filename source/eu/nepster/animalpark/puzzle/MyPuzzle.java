@@ -20,7 +20,8 @@ public class MyPuzzle extends Puzzle{
     }
 
     @Override
-    public void setMark(int x, int y){
+    public void setMark(int x, int y, boolean mark){
+        fields[x][y].setMark(mark);
     }
 
     @Override
