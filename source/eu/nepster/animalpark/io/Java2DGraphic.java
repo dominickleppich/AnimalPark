@@ -39,6 +39,11 @@ public class Java2DGraphic extends JFrame implements Observer {
 
     @Override
     public void update(Observable observable, Object o) {
+        if (o != null && o instanceof Boolean) {
+            boolean win = (Boolean) o;
+            if (win)
+                JOptionPane.showMessageDialog(this, "You won :)");
+        }
         repaint();
     }
 }
