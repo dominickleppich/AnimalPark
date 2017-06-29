@@ -5,6 +5,7 @@ package eu.nepster.animalpark.puzzle;
  */
 public class Field {
     private int color;
+    private boolean mark;
 
     public void setColor(int c){
         color = c;
@@ -12,5 +13,9 @@ public class Field {
 
     public int getColor(){
         return color;
+    }
+
+    public boolean isMark(){
+        return mark;
     }
 }

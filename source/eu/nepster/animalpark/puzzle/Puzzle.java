@@ -1,14 +1,16 @@
 package eu.nepster.animalpark.puzzle;
 
+import java.util.Observable;
+
 /**
  * Created by nico on 6/29/17.
  */
-public interface Puzzle {
-    public void setMark(int x, int y);
+public abstract class Puzzle extends Observable{
+    public abstract void setMark(int x, int y);
 
-    public boolean isMark(int x, int y);
+    public abstract boolean isMark(int x, int y);
 
-    public int getColor(int x, int y);
+    public abstract int getColor(int x, int y);
 
-    public int getSize();
+    public abstract int getSize();
 }

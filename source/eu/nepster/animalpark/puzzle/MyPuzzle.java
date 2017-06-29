@@ -4,7 +4,7 @@ import java.util.Observable;
 
 import static java.lang.Math.sqrt;
 
-public class MyPuzzle extends Observable implements Puzzle{
+public class MyPuzzle extends Puzzle{
     private Field [][] fields;
     private int[] color;
     private int size;
@@ -25,7 +25,7 @@ public class MyPuzzle extends Observable implements Puzzle{
 
     @Override
     public boolean isMark(int x, int y){
-        return false;
+        return fields[x][y].isMark();
     }
 
     @Override
