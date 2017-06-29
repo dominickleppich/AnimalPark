@@ -7,6 +7,10 @@ public class Field {
     private int color;
     private boolean mark;
 
+    public Field(int c){
+        color = c;
+    }
+
     public void setColor(int c){
         color = c;
     }

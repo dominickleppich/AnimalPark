@@ -16,7 +16,7 @@ public class MyPuzzle extends Puzzle{
         fields = new Field[size][size];
         for(int i = 0; i < size; i++){
             for(int j = 0; j < size; j++){
-                fields[i][j].setColor(board[(i*size) + j]);
+                fields[i][j] = new Field(board[(j*size) + i]);
             }
         }
     }
