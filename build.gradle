@@ -12,6 +12,12 @@ apply plugin: 'java'
 // Apply the application plugin to add support for building an application
 apply plugin: 'application'
 
+
+// Define the main class for the application
+mainClassName = 'eu.nepster.animalpark.Boot'
+version = 0.1
+description = "A clone of the Android 'Park Seasons' Game"
+
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use jcenter for resolving your dependencies.
@@ -27,6 +33,14 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-// Define the main class for the application
-mainClassName = 'eu.nepster.animalpark.Boot'
 
+jar {
+  manifest {
+    attributes(
+    	"Implementation-Title": project.name,
+        "Implementation-Version": version,
+        //'Class-Path': configurations.runtime.files.collect { jarDir+"/$it.name" }.join(' '),
+        "Main-Class": mainClassName,
+    )
+  }
+}
